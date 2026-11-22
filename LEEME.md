@@ -2,40 +2,26 @@
 
 Juego de navegador para el README de Peterson Sena. Corre con un velocista 3D, supera varios niveles y evita que Black Flash te alcance.
 
-## Jugar
-Abre `index.html` en un navegador moderno. No necesita instalación, cuentas, servidores ni dependencias externas.
+## Probar el juego
+Abre [la página del juego](https://petersonsenadevs.github.io/r3v3rs3-game/). El enlace **JUGAR AHORA** del README abre la partida directamente en modo de juego; el velocista y el HUD ocupan la zona central de la portada.
+
+En local, extrae el ZIP y abre `index.html` en Chrome o Edge.
 
 - `Espacio` o `↑`: saltar.
 - `↓` o `S`: deslizarse bajo barreras.
-- `P`: pausar o continuar.
-- En móvil: toca la pantalla para saltar.
-- Recoge los rayos para sumar 50 puntos y alejar a Black Flash.
-- Cada nivel cambia el ambiente y acelera la carrera. Black Flash aparece en el nivel 2.
+- `P`: pausar.
+- En móvil: toca el escenario para saltar.
+- Recoge rayos para sumar 50 puntos y alejar a Black Flash.
 
 El récord se guarda en el navegador local.
 
-## Publicarlo en GitHub Pages
-1. Crea un repositorio público llamado `r3v3rs3-run` en `petersonsenadevs`.
-2. Sube `index.html` y la carpeta `assets` a la raíz del repositorio (no subas el ZIP).
-3. En **Settings → Pages**, elige **Deploy from a branch**, `main` y `/(root)`.
-4. Al publicarse, el juego estará en `https://petersonsenadevs.github.io/r3v3rs3-run/`.
+## Portada del README
+La portada SVG muestra un botón gráfico y funciona como un único enlace al juego:
 
-## Enlazarlo desde el README del perfil
-Pega este bloque debajo de los badges. La imagen abre el juego publicado:
-
-```markdown
-<div align="center">
-  <a href="https://petersonsenadevs.github.io/r3v3rs3-run/">
-    <img src="https://raw.githubusercontent.com/petersonsenadevs/r3v3rs3-run/main/assets/game-preview.svg" width="100%" alt="Juega a r3v3rs3 RUN: corre, esquiva y escapa de Black Flash" />
-  </a>
-</div>
+```html
+<a href="https://petersonsenadevs.github.io/r3v3rs3-game/#play">
+  <img src="https://raw.githubusercontent.com/petersonsenadevs/r3v3rs3-game/main/assets/game-preview.svg" width="100%" alt="Jugar a r3v3rs3 RUN" />
+</a>
 ```
 
-GitHub no ejecuta juegos HTML incrustados en un README; por eso la portada enlaza a GitHub Pages.
-
-## Archivos
-- `index.html`: juego completo, lógica, controles y estilos.
-- `assets/runner-3d.png`: animación de carrera creada a partir de la imagen 3D del velocista.
-- `assets/runner-slide.png`: pose 3D encogida y baja para deslizarse bajo las barreras.
-- `assets/black-flash-zombie.png`: perseguidor zombi 3D de ojos rojos que aparece en el nivel 2.
-- `assets/game-preview.svg`: portada clicable para el README.
+GitHub no ejecuta el juego dentro del README: al pulsar la portada, abre GitHub Pages y comienza allí. En esa página el juego se adapta al mismo formato panorámico de la portada.
